@@ -1,0 +1,68 @@
+### ejemplos de status
+############################################################################
+
+#hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][ %{B}%Y-%m-%d %{W}%c %{g}]'
+#hardstatus string "%w"
+#hardstatus string "%{.kW}%-w%{.W}%n %t%{-}%+w"
+#hardstatus string "%{.kW}%-w%{.W}%n %t%{-}%+w %=%c %d/%m/%Y" #black+white+bold
+#hardstatus string "%{.kw}%-w%{.w}%n %t%{-}%+w %=%c %d/%m/%Y" #black+white+normal
+#hardstatus string "%{.kw}%-w%{.Kw}%n %t%{-}%+w %=%c %d/%m/%Y" #black+grey+normal
+#hardstatus string "%{.kc}%-w%{.kc}%n*%t%{-}%+w %=%c %d/%m/%Y" #black+cyan+normal
+#hardstatus string "%{.kc}%-w%{.kw}%n*%t%{-}%+w %= %2` %3`/%4` %6`/%7` %5`/%9` %c%a %m/%d/%Y" #black+cyan+normal+white selected
+#hardstatus string "%{.kc}%-w%{.kw}%n*%t%{-}%+w %= | %1` | %2`C | %3`/%4` | %6`/%7` | %5` | %c %d/%m/%Y" #with dwm status bar
+#hardstatus string '%{= kB}%-Lw%{+r}%50> %n%f* %t%{= kB}%+Lw%< %{= kB}%-= %{-}'
+#hardstatus alwayslastline '%{bk}[ %{W}%H %{b}][ %{w}%l%{b} ]   %{b}[%{w} %D %d.%m %c:%s%{b} ]'
+#hardstatus string "%{.kc}%-w%{.kw}%n*%t%{-}%+w %= %2` %3`/%4` %6`/%7` %5`/%9` %c%a %m/%d/%Y" #black+cyan+normal+white selected7
+
+#hardstatus alwayslastline 
+#hardstatus string "%{=r gk}%-w%{=b wb}%50>%f* %t%{-}%+Lw%<%{- Wk}"
+#hardstatus string "%{=b}%{+g} %{-b}%{r}%{g}%w"
+#hardstatus string "%{=b}%{+g} %{-b}%{r}%H: %{g}%w %{+b}%=%{kG}Load: %l |%{b}%C%A%{g} : %{b}%D, %d/%m/%Y "
+#hardstatus string "%{=r} %{=b}%{+g} %{-b}%{r}%H: %{g}%w %{+b}%=%{kG}%{b}%C%A%{g} : %{b}%D - %d/%m/%Y %{=r} ${USER}@%H "
+#hardstatus string "%{= ky}%-Lw%{=r}%20>%n %t%{= ky}%+Lw %{= ky}%-=| %{= kw}%M%d %c%{-} %{=r} ${USER}@%H "
+
+### hardstatus string "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= %{b}%C%A%{g} : %D, %d/%m/%Y ${USER}@%H"
+### hardstatus string "%{= kw}%-w%{= BW}%n %t%{-}%+w %-=  %C%A : %D %d/%m/%Y %{c}${USER}@%H"
+### hardstatus string "%{= ck}%-w%{= BW}%n %t%{-}%+w %-= %{ gw} %c : %D %d/%m/%Y %{= wb} ${USER}@%H "
+############################################################################
+
+startup_message off
+screen -t Term1        1
+screen -t Term2        2
+
+select 1
+
+hardstatus alwayslastline
+
+#color
+termcap  xterm 'AF=\E[3%dm:AB=\E[4%dm'
+terminfo xterm 'AF=\E[3%p1%dm:AB=\E[4%p1%dm'
+
+#status
+hardstatus string "%{= ck}%-w%{= BW}%n %t%{-}%+w %-=  %c : %D %d/%m/%Y %{= wk} ${USER}@%H "
+
+
+#scroller
+#termcapinfo xterm ti@:te@
+
+#hacer que los aliases funcionen.
+#shell -$SHELL
+
+#shelltitle '% bash '
+
+# visual alert
+vbell on
+vbell_msg " b00m! "
+
+# Automatically detach on hangup. 
+#autodetach on                                # default: on
+
+# Affects the copying of text regions
+#crlf off                                # default: off
+
+setenv LC_CTYPE es_ES.UTF-8
+defutf8 on
+defencoding UTF-8
+deflogin on
+
+
