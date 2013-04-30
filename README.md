@@ -1,4 +1,4 @@
 UnixConfigs
 ===========
 
-Este repositorio contiene diversas configuraciones de herramientas Unix / Linux
+Este repositorio contiene diversas configuraciones de herramientas Unix / Linux / MacOS
